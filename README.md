@@ -5,8 +5,8 @@ Streamlit-Dashboard zur Analyse von Kundenzufriedenheit in der Luftfahrt. Basier
 ## Features
 
 - **Zufriedenheitsübersicht** — KPI-Karten, Balkendiagramme nach Klasse/Reisegrund/Kundentyp, interaktive Filter
-- **Treiberanalyse** — Logistische Regression auf 14 Zufriedenheitsdimensionen, Importance-Performance-Matrix
-- **Segmentierung** — K-Means-Clustering mit Radardiagrammen und Segmentprofilen
+- **Treiberanalyse** _(noch nicht implementiert)_ — Logistische Regression auf 14 Zufriedenheitsdimensionen, Importance-Performance-Matrix
+- **Segmentierung** _(noch nicht implementiert)_ — K-Means-Clustering mit Radardiagrammen und Segmentprofilen
 
 ## Setup
 
