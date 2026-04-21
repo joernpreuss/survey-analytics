@@ -15,8 +15,7 @@ Daten von Kaggle herunterladen und in data/ ablegen:
 -> data/train.csv, data/test.csv
 
 ```bash
-uv sync
-uv run streamlit run dashboard.py
+uv run streamlit run app/dashboard.py
 ```
 
 ## Stack
