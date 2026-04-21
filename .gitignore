@@ -9,8 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
-# Data files
+# Data files — Kaggle raw exports stay out; only the merged survey CSV is tracked
 data/*.csv
+!data/survey.csv
 
 # Environment variables
 .env

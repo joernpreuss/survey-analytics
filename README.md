@@ -10,13 +10,11 @@ Streamlit-Dashboard zur Analyse von Kundenzufriedenheit in der Luftfahrt. Basier
 
 ## Setup
 
-Daten von Kaggle herunterladen und in data/ ablegen:
-<https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction>
--> data/train.csv, data/test.csv
-
 ```bash
 uv run streamlit run app/dashboard.py
 ```
+
+Datensatz (`data/survey.csv`) ist im Repo enthalten — Kaggle train.csv und test.csv zusammengeführt, Index- und id-Spalten entfernt.
 
 ## Stack
 

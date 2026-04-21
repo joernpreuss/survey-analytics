@@ -10,12 +10,7 @@ st.set_page_config(page_title="Survey Analytics", layout="wide")
 
 @st.cache_data
 def load_data():
-    # errors="ignore": Kaggle-Export liefert je nach Version mal mit, mal ohne Index-/id-Spalte
-    df = pd.concat(
-        [pd.read_csv("data/train.csv"), pd.read_csv("data/test.csv")],
-        ignore_index=True,
-    ).drop(columns=["Unnamed: 0", "id"], errors="ignore")
-    return df
+    return pd.read_csv("data/survey.csv")
 
 
 df = load_data()
