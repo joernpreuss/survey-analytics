@@ -1,8 +1,12 @@
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px  # pyright: ignore[reportMissingTypeStubs]
 import streamlit as st
 
 st.set_page_config(page_title="Survey Analytics", layout="wide")
+
+DATA_PATH = Path(__file__).parent.parent / "data" / "survey.csv"
 
 
 # Daten laden
@@ -10,7 +14,7 @@ st.set_page_config(page_title="Survey Analytics", layout="wide")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/survey.csv")
+    return pd.read_csv(DATA_PATH)
 
 
 df = load_data()
@@ -20,16 +24,16 @@ df = load_data()
 
 st.sidebar.header("Filter")
 
-sel_class = st.sidebar.multiselect(
-    "Class", df["Class"].unique(), default=df["Class"].unique()
-)
+classes = df["Class"].unique()
+travel_types = df["Type of Travel"].unique()
+customer_types = df["Customer Type"].unique()
+
+sel_class = st.sidebar.multiselect("Class", classes, default=classes)
 sel_travel = st.sidebar.multiselect(
-    "Type of Travel",
-    df["Type of Travel"].unique(),
-    default=df["Type of Travel"].unique(),
+    "Type of Travel", travel_types, default=travel_types
 )
 sel_customer = st.sidebar.multiselect(
-    "Customer Type", df["Customer Type"].unique(), default=df["Customer Type"].unique()
+    "Customer Type", customer_types, default=customer_types
 )
 
 filtered = df[
